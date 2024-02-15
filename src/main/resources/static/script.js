@@ -13,7 +13,7 @@ function kjopBillett() {
     if (filmNavn === "Velg film her") {
         document.getElementById("feilFilmNavn").textContent = " Velg en film";
     } else {
-        document.getElementById("feilFilmNavn").textContent = "Velg film!";
+        document.getElementById("feilFilmNavn").textContent = "";
     }
     //billetter
     if (!antallBilletter || isNaN(antallBilletter) || antallBilletter <= 0) {
