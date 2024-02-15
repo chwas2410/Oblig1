@@ -79,39 +79,9 @@ function kjopBillett() {
     document.getElementById("etternavn").value = "";
     document.getElementById("telefonNr").value = "";
     document.getElementById("epost").value = "";
-    //variabelene går inn i en billett
-    /*const nyBillett = {
-        Film: filmNavn,
-        AntallBilletter: antallBilletter,
-        Fornavn: fornavn,
-        Etternavn: etternavn,
-        Telefonnr: telefonnr,
-        Epost: epost
-    };
 
-    //billett blir lagt til i arrayet
-    bestilling.push(nyBillett);
-    output();*/
 }
-/*function output(){
-    //billeten skrives ut
-    const outputDiv = document.getElementById("output");
-    outputDiv.innerHTML;
-    bestilling.forEach(billett => {
-        const billettInfo = `
-            <p>
-                Film: ${billett.Film}<br>
-                Antall billetter: ${billett.AntallBilletter}<br>
-                Fornavn: ${billett.Fornavn}<br>
-                Etternavn: ${billett.Etternavn}<br>
-                Telefonnr: ${billett.Telefonnr}<br>
-                Epost: ${billett.Epost}
-            </p>
-        `;
-        outputDiv.innerHTML += billettInfo;
-    });
 
-}*/
 function output() {
     //billeten skrives ut
     const outputDiv = document.getElementById("output");
