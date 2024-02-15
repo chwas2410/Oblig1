@@ -10,58 +10,66 @@
 
 <h1>Bestilling av kinobiletter</h1>
 
-<label for="filmNavn">Velg Film</label>
-<select name="movies" id="filmNavn" value="value" onchange="movieSelect()">
-    <option selected disabled value="x">Velg film her</option>
-    <option value="Kon-tiki">Kon-tiki</option>
-    <option value="Skjelvet">Skjelvet</option>
-    <option value="Tunnelen">Tunnelen</option>
-    <option value="Bølgen">Bølgen</option>
-    <option value="Haisommer">Haisommer</option>
-</select>
+<table>
+    <tr>
+        <td>Velg Film</td>
+        <td>
+            <select id="filmNavn">
+                <option value="Velg Film: ">Velg film her</option>
+                <option value="Kon-tiki">Kon-tiki</option>
+                <option value="Skjelvet">Skjelvet</option>
+                <option value="Tunnelen">Tunnelen</option>
+                <option value="Bølgen">Bølgen</option>
+                <option value="Haisommer">Haisommer</option>
+            </select>
+            <span id ="feilFilmNavn" style = "color : red"></span>
+        </td>
+    </tr>
+    <tr><td><br></td></tr>
+
+    <tr>
+        <td>Antall billetter</td>
+        <td><input type="text" size="2" id="antallBilletter">
+            <span id="feilAntallBilletter" style="color : red"></span>
+        </td>
+    </tr>
+    <tr><td><br></td></tr>
+    <tr>
+        <td>Fornavn</td>
+        <td><input type="text" id ="fornavn">
+            <span id="feilFornavn" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>Etternavn</td>
+        <td><input type="text" id="etternavn">
+            <span id="feilEtternavn" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>Telefonnr</td>
+        <td><input type="text" id="telefonNr" pattern="[0-9]{8}" required>
+            <span id="feilTelefonNr" style="color: red"></span>
+        </td>
+
+    </tr>
+    <tr>
+        <td>Epost</td>
+        <td><input type="text" id="epost">
+            <span id="feilEpost" style="color: red"></span>
+        </td>
+    </tr>
+    <tr>
+        <td><button onclick ="kjopBillett()">Kjøp billett</button>
+        </td>
+    </tr>
+</table>
+
+<h2> Alle billetter</h2>
+<div id="output"></div>
+
 <br>
-<br>
-<label for="antallBilletter">Velg antall</label>
-<select name="antallBiletter" id="antallBilletter" value="value">
-    <option selected disabled value="x">--</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-</select><br>
-<p id="numbR"></p>
-
-<form id="billettSkjema" class="vertikalt-skjema">
-    <div class="skjema-rad">
-        <label for="forNavn">Fornavn:</label>
-        <input type="text" id="forNavn" required>
-    </div>
-
-    <div class="skjema-rad">
-        <label for="etterNavn">Etternavn:</label>
-        <input type="text" id="etterNavn" required>
-    </div>
-
-    <div class="skjema-rad">
-        <label for="epost">E-post:</label>
-        <input type="email" id="epost" required>
-    </div>
-
-    <div class="skjema-rad">
-        <label for="telefon">Telefonnummer:</label>
-        <input type="tel" id="telefon" pattern="[0-9]{8}" required>
-    </div>
-</form>
-
-    <button type="button" onclick="kjopBillett()">Kjøp billett</button>
-
-</form>
-
-<h2>Alle billetter</h2>
-<ul id="billettListe"></ul>
-
-<button type="button" onclick="slettAlleBilletter()">Slett alle billetter</button>
-
+<button onclick=slett()>Slett alle billettene</button>
 <script src="script.js"></script>
 </body>
 </html>
