@@ -3,7 +3,7 @@ OsloMet brukernavn: chwas2410@oslomet.no
 
 GitHub brukernavn: chwas2410
 
-Github repo URL: https://github.com/data1700-v23/oblig-1-chwas2410.git
+Github repo URL: https://github.com/chwas2410/Oblig1
 
 Fullt navn: Charlotte Wassnes
 
