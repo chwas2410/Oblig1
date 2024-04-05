@@ -1,13 +1,13 @@
-package com.example.oblig1;
+package com.example.idk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Oblig1Application {
+public class IdkApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Oblig1Application.class, args);
+        SpringApplication.run(IdkApplication.class, args);
     }
 
 }
